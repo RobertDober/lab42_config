@@ -1,0 +1,56 @@
+PATH
+  remote: .
+  specs:
+    lab42_config (0.0.1)
+      forwarder2 (~> 0.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ae (1.8.2)
+      ansi
+    ansi (1.4.3)
+    brass (1.2.1)
+    coderay (1.1.0)
+    diff-lcs (1.2.5)
+    facets (2.9.3)
+    forwarder2 (0.2.0)
+    json (1.8.1)
+    method_source (0.8.2)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
+    qed (2.9.1)
+      ansi
+      brass
+      facets (>= 2.8)
+    rspec (3.1.0)
+      rspec-core (~> 3.1.0)
+      rspec-expectations (~> 3.1.0)
+      rspec-mocks (~> 3.1.0)
+    rspec-core (3.1.5)
+      rspec-support (~> 3.1.0)
+    rspec-expectations (3.1.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.1.0)
+    rspec-mocks (3.1.2)
+      rspec-support (~> 3.1.0)
+    rspec-support (3.1.1)
+    slop (3.6.0)
+    travis-lint (2.0.0)
+      json
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ae (~> 1.8)
+  lab42_config!
+  pry (~> 0.10)
+  pry-nav (~> 0.2)
+  qed (~> 2.9)
+  rspec (~> 3.1)
+  travis-lint (~> 2.0)

@@ -1,5 +1,5 @@
 module Lab42
-  class Config
+  module Config
     VERSION = '0.0.1' 
   end
 end # module Lab42
