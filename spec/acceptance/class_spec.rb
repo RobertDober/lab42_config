@@ -30,6 +30,6 @@ describe Lab42::Config do
           klass.config{ age 52 }
         end.to raise_error RuntimeError, /can't modify/ 
       end
-    end # context 'it cannot be overwritten on instance level'
+    end # context 'it cannot be'
   end # context 'on class level'
 end # describe Lab42::Config
