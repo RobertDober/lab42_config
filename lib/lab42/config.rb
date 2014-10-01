@@ -7,6 +7,7 @@ module Lab42
       into.extend ClassMethods
     end
     def configuration
+      self.class.__config__
     end
     
   end # module Config

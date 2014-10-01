@@ -8,7 +8,7 @@ The configuration values will serve as defaults for all instances.
 ```ruby
     class Commiter
       include Lab42::Config
-      configure do 
+      config do 
         dvs "github"
         status :commiter
       end
@@ -18,10 +18,9 @@ The configuration values will serve as defaults for all instances.
 Now the `configuration` instance method gives access to these values
 
 ```ruby
-    Commiter.new.tap do | comm |
-      comm.configuration.dvs.assert == 'github'
-      comm.configuration.status.assert == :commiter
-    end
+    comm = Commiter.new
+    comm.configuration.dvs.assert == 'github'
+    comm.configuration.status.assert == :commiter
 ```
 
 
