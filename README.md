@@ -17,3 +17,4 @@ Refactor your configuration away
 ```
 
 For details see the corresponding [QED demo](https://github.com/RobertDober/lab42_config/blob/master/demo/class.md).
+
