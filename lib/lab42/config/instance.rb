@@ -2,6 +2,9 @@ module Lab42
   module Config
     class Instance < BasicObject
 
+      def freeze!
+          __values__.freeze
+      end
       private
       def method_missing name, *args, &blk
         super if args.size > 1
