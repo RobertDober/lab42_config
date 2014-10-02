@@ -62,13 +62,18 @@ As a matter of fact one should not use configuration but instance data, like so
     c1.dvs.assert == 'bitbucket'
 ```
 
-## Classes cannot reopen the config either
+## However Classes can reopen the config
+
+
+This is a typical use case, ship a class in a _gem_ and allow reconfiguration
+of default values.
 
 ```ruby
-     
-    RuntimeError.assert.raised? do 
-      Commiter.config do
-        commits 42
+    # A Shell class provided by a gem with reasonable defaults
+    class Shell
+      include Lab42::Config
+      config do
+        home{ File.join "home" user }
       end
     end
 
