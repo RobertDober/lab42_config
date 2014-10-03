@@ -1,4 +1,5 @@
 require_relative 'config/class_methods'
+require_relative 'config/class_level_config'
 
 module Lab42
   module Config
@@ -7,7 +8,7 @@ module Lab42
       into.extend ClassMethods
     end
     def configuration
-      self.class.__config__
+      @_lab42_config__configuration__ = self.class.__config__.instance_level_config self
     end
     
   end # module Config

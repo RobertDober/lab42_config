@@ -28,7 +28,7 @@ Now the `configuration` instance method gives access to these values
 ```ruby
     c = Commiter.new
     
-    RuntimeError.assert.raised? do
+    NoMethodError.assert.raised? do
       c.configuration.dvs "bitbucket"
     end
 ```
@@ -36,7 +36,7 @@ Now the `configuration` instance method gives access to these values
 ### Nor is adding new values
 
 ```ruby
-      RuntimeError.assert.raised? do
+      NoMethodError.assert.raised? do
         c.configuration.commits 42
       end
 ```
@@ -73,11 +73,22 @@ of default values.
     class Shell
       include Lab42::Config
       config do
-        home{ File.join "home" user }
+        home{ File.join "home", user }
       end
+      def user; 'robert' end
     end
 
-    
+    Shell.new.configuration.home.assert == File.join('home', 'robert')
 ```
+
+Now a consumer of this API might want to work on a different OS
+
+```ruby
+    Shell.config do
+      home{ File.join "u", user }
+    end
+    Shell.new.configuration.home.assert == File.join('u', 'robert')
+```
+
 
 
